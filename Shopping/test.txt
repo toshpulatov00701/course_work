@@ -1,0 +1,238 @@
+Mavzu: Kiyim do‘koni uchun elektron tizim
+
+!Bu tizim online shopping emas.
+[Lekin online shopping'ning bir qismi sifatida foydalanish mumkin]
+
+Bu tizim o'zi nima uchun kerak?
+Bu tizim do'kon egalariga kunlik, oylik, yillik daromadni ko'rish va 
+xodimlarni nazorat qilish va ularni ishini baholashda yordam beradi.
+				   	
+Bu tizim kimlar uchun?
+Bu tizimdan faqat do'kon xodimlari (3ta rolga bo'lingan holatda) foydalanadi.
+
+rollar:
+admin -     [xodimlarni boshqaradi, tizim uchun javobgar shaxslar]
+moderator - [faqat tavar qo'shadi, o'zgartiradi, o'chiradi]
+seller -    [faqat savdo qiladi]
+
+Bularga keyingi darslarda ham to'xtalib o'tamiz...
+
+Kerakli dasturlar:
+Visual Studio 2022 - [ishlayotganligini tekshirib ko'ramiz] - ishlamoqda.
+Sql Server 2022 - [ishlayotganligini tekshirib ko'ramiz] - ishlamoqda.
+
+Bularni o'rnatish uchun qo'llanmalarni ham telegram guruhga tashlab qo'yaman.
+
+ER diagramma
+
+Bulardan foydalanamiz. Lekin o'zgartirishlar kiritamiz...
+
+Xato va kamchiliklar uchun uzr. :)
+
+Bog'lanish:
+Abduhalil Toshpo'latov
+telegram: @www_00701
+github: https://github.com/toshpulatov00701
+
+1-dars tugadi.
+
+
+************************************************
+Bazani shakllantirib olamiz.
+
+Database name: shopping
+Jadvallarni andozasini ER diagrammadan olamiz.
+
+Asosiy jadvalni yaratishdan oldin, unga bog'lanadigan jadvallarni yaratib olamiz.
+
+Endi asosiy jadvalni yaratamiz.
+
+Daromad va xodimlarni boshqarish uchun quyidagi jadvallarni yaratib olamiz:
+xodimlar
+savdolar
+xodim_harakatlari - [id, xodim_id, harakat, vaqt]
+
+
+
+
+
+
+
+
+Xato va kamchiliklar uchun uzr. :)
+
+Bog'lanish:
+Abduhalil Toshpo'latov
+telegram: @www_00701
+github: https://github.com/toshpulatov00701
+
+2-dars tugadi.
+
+
+************************************
+Loyiha yaratish va mavzu formasi.
+
+- Loyiha yaratamiz
+- Mavzu uchun birinchi forma yaratamiz
+- Icon joylashtirish. .ico yoki .icon formatda bo'lishi kerek
+- Icon ko'rinishidagi rasmlarni olish - bu rasmni olib kelamiz. keyingi oynaga 
+o'tish uchun ishlatamiz.
+- keyingi forma[Login] ni ham yaratib qo'yamiz. Rasm bosilganda keyingi oynaga o'tishi kerak.
+
+
+3-dars tugadi.
+
+************************************
+Xodimlar formasi -bu forma yordamida xodimlar jadvaliga element qo'shish, 
+                  o'chirish, o'zgartirish va qidirish amallari bajariladi.
+
+
+* Yangi forma yaratish(Xodimlar)
+* Element kiritish va o'zgartirish uchun TextBoxlarni joylashtirish
+* Amallar uchun tugmalar:
+   - INSERT (qo'shish)
+   - UPDATE (o'zgartirish)
+   - DELETE (o'chirish)
+   - CLEAR (tozalash)
+   - SEARCH (qidiruv)
+
+* Ma'lumotlarni chiqarish uchun DataGridView
+
+! Ushbu darsda xodimlar nomli formaning faqat interfeysi(ko'rinishi)ni hosil qilindi.		
+4-dars tugadi.
+
+
+*****************
+File Upload(Rasm yuklash) - Kompyuterdan dasturga xodimning rasmini yuklaymiz.
+
+  - Rasm uchun button va pictureBox joylashtiramiz.
+  - Rasmni bazaga yangi takrorlanmaydigan nom bilan saqlaymiz. 
+    Chunki bazaga ikkita foydalanuvchi ikki xil rasmni ayni bir nomda saqlaganda xatolik bo'lmasligi uchun.
+  - Shu nomni hosil qilib olamiz.
+  - Rasm yuklash uchun metod yaratib olamiz.
+
+			 
+
+Xato va kamchiliklar uchun uzr. :)
+
+Bog'lanish:
+Abduhalil Toshpo'latov
+telegram: @www_00701
+github: https://github.com/toshpulatov00701
+
+7-dars tugadi.
+
+
+*************************************
+SELECT(Xodimlar) - Xodimlar jadvalidagi ma'lumotlarni dataGridViewga joylashtiramiz.
+
+
+
+* dataGridView sozlamalari	
+* -Xodimlar nomli jadvaldagi ma'lumotlarni o'qib olish uchun DataTable ko'rinishida metod yozamiz.	
+  - Bu metodga murojat qilganda u Xodimlar sinfidan olingan obyektlarni DataTable ko'rinishida qaytaradi. 
+  - Bu metodni ControlXodimlar(bu sinfni xodimlar nomli jadvalga ishlov berish 
+                                                               uchun yaratgan edi.) sinfi ichida yaratamiz.
+
+   - bu metodni forma yuklangan vaqtda chaqirishimiz kerak. Uni uchun ham yana bir metod yaratamiz.
+
+
+**************************************************
+DELETE, SEARCH, CLEAR
+
+* DELETE -xodimlar nomli jadvaldagi ma'lumotni o'chirish
+         -dataGridView'da tanlangan elementni o'chiramiz
+         -O'chirish uchun (ControlXodimlar sinfi ichida) metod yaratib olamiz
+         -Bu metodga muroajat qilamiz
+
+!!!Element o'chirilganda unga tegishli rasm ham o'chishi kerak.
+
+Rasm ham element ham o'chdi. Faqat o'chgandan keyin dataGridView'ni yangilab qo'yish kerak
+
+* SEARCH -Berilgan kalit so'z bo'yicha qidiruv
+         -Qidiruv uchun (ControlXodimlar sinfi ichida) metod yaratib olamiz
+	 -Bu metoddan qaytgan ma'lumotlarni dataGridView'ga chiqarganimiz uchun
+                                uning turi DataTable ko'rinishida bo'lishi kerak.	
+         -Bu metodga muroajat qilamiz	
+
+* CLEAR -barcha maydonlarni tozalash va dataGridView'ni yangilash
+
+10-dars tugadi.
+
+
+**********************
+Bog'langan jadvallardagi ma'lumotlardan foydalanish.
+
+[Oldingi darslardagi xatoliklarni to'g'irlash]
+* shopping nomli bazada viloyatlar(id, nomi, tumanlar_soni) nomli jadval yaratamiz
+* xodimlar nomli jadvalimizga viloyat_id nomli ustunni qo'shamiz va shu ustunga 
+  viloyatlar nomli jadvalimizning id ustunini bog'laymiz.
+* xodimlar jadvali uchun yaratilgan formada viloyat_id'ni qo'shib chiqamiz. INSERT, UPDATE, READ, SEARCH uchun;
+  -READ uchun   -- dataGridView'da viloyatlarni ham chiqaramiz;
+                -- dataGridView'da tanlangan elementning viloyatini comboBox'ga joylashtiramiz.
+                -- comboBox'ga viloyatlarni joylashtirish uchun ControlViloyatlar sinfini yaratamiz
+                     	           So'ngra uni ichida viloyatlarni nomini olish uchun metod yaratamiz;
+  -INSERT uchun -- insert uchun tanlangan  elementni id'si kerak bo'ladi. Uni uchun ham metod yaratamiz;
+  -UPDATE uchun -- berilgan viloyat nomi bo'yicha id'ni tanlab olamiz.
+
+  -SEARCH uchun -- Qidiruv uchun yozgan metodimizni o'zgartirib qo'yamiz.
+
+
+
+Xato va kamchiliklar uchun uzr. :)
+
+Bog'lanish:
+Abduhalil Toshpo'latov
+telegram: @www_00701
+github: https://github.com/toshpulatov00701
+
+12-dars tugadi.
+
+*******************************
+
+
+
+Asosiy formaga ma'lumotlarni chiqarish.
+
+
+* Daromadlarni faqat savdolar jadvalidan olganimiz uchun uni bir nechta elementlar bilan to'ldirib olamiz;
+- Joriy oydagi daromadni topish uchun SQL so'rovni ko'rib chiqamiz.
+* Savdolar haqida ma'lumot olish uchun ControlSavdolar nomli sinf yaratib oliz;
+  - bu sinf ichida kunlik, oylik va yillik darodamlarni hisoblash uchun metodlar yaratib olamiz;
+  - bu metodlarni Asosiy formamizga chaqiramiz.
+* Shu holatdagi metodlarni ControlXodimlar va ControlKiyimlar sinflari ichida ham yaratib olamiz 
+                                                                            va Asosiy formamizga chaqiramiz.
+
+Xato va kamchiliklar uchun uzr. :)
+
+Bog'lanish:
+Abduhalil Toshpo'latov
+telegram: @www_00701
+github: https://github.com/toshpulatov00701
+
+12-dars tugadi.
+
+
+12-dars. Asosiy formaga ma'lumotlarni chiqarish.
+#Course_Work
+
+
+*************************
+
+
+
+
+
+
+
+
+
+
+
+
+MIRZO ULUG‘BЕK NOMIDAGI O‘ZBЕKISTON MILLIY UNIVЕRSITЕTI
+Amaliy matematika va intellektual texnologiyalar fakulteti
+
+Kiyim do‘koni uchun elektron tizim
+
+Fan: Berilganlar bazasi
