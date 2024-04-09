@@ -1,1 +1,1 @@
-# couse_work
+Kurs ishini bajarish uchun. Vidoe darslar to'plamidagi dastur kodi.
